@@ -10,8 +10,11 @@
     ],
     "outputs": [
         {
-            "id": "from",
-            "title":"From"
+            "id": "categories",
+            "title":"Foursquare categories"
+        }, {
+            "id": "zipcode",
+            "title":"Zipcode"
         }
     ],
     "icon": "text-width",

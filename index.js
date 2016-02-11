@@ -23,10 +23,10 @@ module.exports = {
         });
         if(categories.length > 0) {
             this.complete(_.map(categories, function(category) {
-                return { zipcode: zip, category: category.trim() };
+                return { zipcode: zip, categories: category.trim() };
             }));
         } else {
-            this.complete({ zipcode: zip, category: null });
+            this.complete({ zipcode: zip, categories: null });
         }
     }
 };
