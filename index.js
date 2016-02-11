@@ -10,10 +10,9 @@ module.exports = {
      * @param {AppData} dexter Container for all data used in this workflow.
      */
     run: function(step, dexter) {
-        var msg = step.input('text').first()
+        var msg = step.input('text', '').first()
             , zip, requestedCategory
         ;
-        assert(msg);
         zip = msg.replace(/.*?([\d]*)$/, '$1');
         if(!zip) {
             zip = step.input('zipcode').first();
