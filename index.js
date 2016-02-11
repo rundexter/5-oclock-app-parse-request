@@ -10,8 +10,9 @@ module.exports = {
      * @param {AppData} dexter Container for all data used in this workflow.
      */
     run: function(step, dexter) {
-        var msg = step.input('text', '').first()
+        var msg = step.input('text').first() || ''
             , zip, requestedCategory
+            , self = this
         ;
         zip = msg.replace(/.*?([\d]*)$/, '$1');
         if(!zip) {
@@ -26,7 +27,10 @@ module.exports = {
                 return { zipcode: zip, categories: category.trim() };
             }));
         } else {
-            this.complete({ zipcode: zip, categories: null });
+            categories = _.union.apply(_, _.map(validCategories, function(validCategory) {
+                return self.getCategories(validCategory);
+            }));
+            this.complete({ zipcode: zip, categories: categories });
         }
     }
     , getCategories: function(input) {
