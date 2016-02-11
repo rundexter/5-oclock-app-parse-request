@@ -1,7 +1,7 @@
 {
     "name": "5-oclock-app-parse-request",
     "version": "0.0.1",
-    "description": "",
+    "description": "Extract Foursquare categories and an optional zip code from the slack message",
     "main": "index.js",
     "author": "Justin Fargione",
     "license": "ISC",

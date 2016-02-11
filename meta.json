@@ -1,26 +1,16 @@
-/*
- * Metadata describing the module operation
- */
 {
-    //Required. Inputs the module expects.
     "inputs": [
-        //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "text",
+            "title":"Text"
         }
-        */
     ],
-    //Required. Outputs the module emits.
     "outputs": [
-      //e.g.
-      /*
         {
             "id": "from",
             "title":"From"
         }
-      */
     ],
-    "title": "5 O'Clock App: Parse Request" /* Required.A display name for the module */
+    "icon": "text-width",
+    "title": "5 O'Clock App: Parse Request"
 }
