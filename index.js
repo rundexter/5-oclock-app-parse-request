@@ -14,6 +14,9 @@ module.exports = {
         ;
         assert(msg);
         zip = msg.replace(/.*?([\d]*)$/, '$1');
+        if(!zip) {
+            zip = step.input('zipcode').first();
+        }
         categories = msg.replace(zip, '').split(',');
         categories = _.filter(categories, function(category) {
             return category.trim() || false;

@@ -3,6 +3,9 @@
         {
             "id": "text",
             "title":"Text"
+        }, {
+            "id": "zipcode",
+            "title":"Default zip code"
         }
     ],
     "outputs": [
