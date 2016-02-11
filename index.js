@@ -96,11 +96,19 @@ module.exports = {
                     "Paella Restaurant","Tapas Restaurant","Sri Lankan Restaurant","Swiss Restaurant","Theme Restaurant",
                     "Turkish Restaurant","Doner Restaurant","Kebab Restaurant","Kokoreç Restaurant",
                     "Kumpir Restaurant","Kumru Restaurant","Tantuni Restaurant","Turkish Home Cooking Restaurant",
-                    "Ukrainian Restaurant","Varenyky restaurant","West-Ukrainian Restaurant","Vegetarian / Vegan Restaurant"
+                    "Ukrainian Restaurant","Varenyky restaurant","West-Ukrainian Restaurant","Vegetarian / Vegan Restaurant",
+                    "Breakfast Spot", "Buffet", "Burger Join", "Cafeteria", "Takoyaki Place", "Wagashi Place",
+                    "Noodle House", "BBQ Joint", "Bagel Shop", "Bistro", "Acai House", "Churrascaria",
+                    "Empada House", "Pastelaria", "Creperie", "Diner", "Fish & Chips Shop", "Food Stand",
+                    "Food Truck", "Fried Chicken Joint", "Friterie", "Gastropub", "Bratwurst Join",
+                    "Currywurst Joint", "Fish Taverna", "Grilled Meat Restaurant", "Hot Dog Joint",
+                    "Dhaba", "Dosa Place", "Irish Pub", "Mac & Cheese Joint", "Burrito Place", "Taco Place",
+                    "Pizza Place", "Poutine Place", "Blini House", "Pelmeni House", "Salad Place",
+                    "Sandwich Place", "Snack Place", "Soup Place", "Steakhouse", "Wings Joint"
                 ];
                 break;
             case 'coffee':
-                return ['Coffee Shop', 'Turkish Coffeehouse', 'Diner'];
+                return ['Coffee Shop', 'Turkish Coffeehouse', 'Diner', 'Café', "Bagel Shop", "Bakery", "Kafenio"]
                 break;
             default:
                 return [];
