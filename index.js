@@ -11,7 +11,7 @@ module.exports = {
      */
     run: function(step, dexter) {
         var msg = step.input('text').first() || ''
-            , zip, requestedCategory
+            , zip, requestedCategory, categories
             , self = this
         ;
         zip = msg.replace(/.*?([\d]*)$/, '$1');
@@ -23,15 +23,15 @@ module.exports = {
             if(_.indexOf(validCategories, requestedCategory) === false) {
                 this.fail(new Error('No such requestedCategory'));
             }
-            this.complete(_.map(this.getCategories(requestedCategory), function(category) {
-                return { zipcode: zip, categories: category.trim() };
-            }));
+            categories = this.getCategories(requestedCategory);
         } else {
             categories = _.union.apply(_, _.map(validCategories, function(validCategory) {
                 return self.getCategories(validCategory);
             }));
-            this.complete({ zipcode: zip, categories: categories });
         }
+        this.complete(_.map(categories, function(category) {
+            return { zipcode: zip, categories: category.trim() };
+        }));
     }
     , getCategories: function(input) {
         switch(input) {
